@@ -23,7 +23,7 @@ default['php']['install_method'] = 'package'
 default['php']['directives'] = {}
 
 case node["platform_family"]
-when "rhel", "fedora"
+when "rhel", "fedora", "centos"
   lib_dir = node['kernel']['machine'] =~ /x86_64/ ? 'lib64' : 'lib'
   default['php']['conf_dir']      = '/etc'
   default['php']['ext_conf_dir']  = '/etc/php.d'
